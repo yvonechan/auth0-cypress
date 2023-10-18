@@ -5,16 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div>
-    <h1 class="font-extrabold">{{ msg }}</h1>
+  <div class="w-full p-10 bg-gradient-to-r from-cyan-700 from-60%">
+    <h1 class="font-sans text-2xl font-extrabold text-white">{{ msg }}</h1>
   </div>
 </template>
-
-<style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 1.5rem;
-  position: relative;
-}
-
-</style>

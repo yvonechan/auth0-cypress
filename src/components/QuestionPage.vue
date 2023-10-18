@@ -5,16 +5,10 @@ defineProps<{
 </script>
 
 <template>
-  <div>
-    <h1 class="text-slate-400 font-thin">{{ msg }}</h1>
+  <div class="w-full p-10 border-x-4 border-zinc-200">
+    <form>
+      <p>Message is:</p>
+      <input class="border-1" placeholder="edit me" />
+    </form>
   </div>
 </template>
-
-<style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 1.5rem;
-  position: relative;
-}
-
-</style>
