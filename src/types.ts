@@ -1,3 +1,5 @@
 export interface state{
-    count:number
+    season: string;
+    cusine: string;
+    anime: string;
 }

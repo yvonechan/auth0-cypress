@@ -10,12 +10,16 @@ import {type state} from './types'
 const store = createStore({
   state () {
     return {
-      count: 0
+      season: "",
+      cusine: "",
+      anime: ""
     }
   },
   mutations: {
-    increment (state: state) {
-      state.count++
+    update (state: state, payload:state) {
+      state.season = payload.season
+      state.cusine = payload.cusine
+      state.anime = payload.anime
     }
   }
 })
