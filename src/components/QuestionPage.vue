@@ -55,5 +55,4 @@ function handleSubmit(): void {
       </button>
     </div>
   </div>
-  {{ store.state }}
 </template>
