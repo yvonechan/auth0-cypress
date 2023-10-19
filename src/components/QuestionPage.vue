@@ -1,24 +1,23 @@
 <script setup lang="ts">
 import { ref , watch } from 'vue'
 import { useStore } from 'vuex'
-defineProps<{
-  msg: string
-}>()
 const store = useStore();
 
 const season = ref("")
 const cusine = ref("")
 const anime = ref("")
 
-watch([season, cusine, anime],([newSeason, newCusine, newAnime])=>{
+function handleSubmit():void{
   const updatedAnswer = {
-    season: newSeason,
-    cusine: newCusine,
-    anime: newAnime
+    season,
+    cusine,
+    anime
   }
   store.commit('update', updatedAnswer)
-})
-
+  season.value = ""
+  cusine.value = ""
+  anime.value = ""
+}
 </script>
 
 <template>
@@ -47,10 +46,7 @@ watch([season, cusine, anime],([newSeason, newCusine, newAnime])=>{
         <option value="oshinoko"> 推しのこ</option>
       </select>
       <div class="w-full text-center">
-        <button class="w-1/4 border-2 rounded-lg p-2 bg-lime-600 hover:bg-green-600 text-white">Submit</button>
+        <button class="w-1/4 border-2 rounded-lg p-2 bg-lime-600 hover:bg-green-600 text-white" @click="handleSubmit">Submit</button>
       </div>
-      {{ store.state.season }}
-      {{ store.state.cusine }}
-      {{ store.state.anime }}
   </div>
 </template>
