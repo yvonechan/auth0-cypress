@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useAuth0 } from '@auth0/auth0-vue'
 import { ref } from 'vue'
+import NavBar from './NavBar.vue'
 defineProps<{
   msg: string
 }>()
@@ -24,11 +25,11 @@ function logout() {
 </script>
 
 <template>
-  <div class="w-full flex flex-row justify-end">
+  <div class="w-full pb-2 flex justify-end">
     <button
       v-if="!isAuthenticated && !isLoading"
       @click.prevent="login"
-      class="border-2 rounded-lg p-2"
+      class="border-2 rounded-lg p-3"
     >
       Login
     </button>
@@ -46,4 +47,5 @@ function logout() {
       A learning project for using vue3, auth0 and cypress
     </p>
   </div>
+  <NavBar v-if="isAuthenticated" />
 </template>

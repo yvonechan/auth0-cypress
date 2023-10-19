@@ -19,6 +19,7 @@ const store = createStore({
   },
   mutations: {
     update(state: answer, payload: answer) {
+      console.log(payload)
       state.season = payload.season
       state.cusine = payload.cusine
       state.anime = payload.anime
