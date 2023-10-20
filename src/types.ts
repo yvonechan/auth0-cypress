@@ -1,17 +1,17 @@
-export interface answer {
+export interface answerInterface {
   season: string
   cusine: string
   anime: string
 }
-interface cusineDisplay {
+interface cusineDisplayInterface {
   [key: string]: string
 }
 
-interface animeDisplay {
+interface animeDisplayInterface {
   [key: string]: string
 }
 
 export interface displayWordMapInterface {
-  cusine: cusineDisplay
-  anime: animeDisplay
+  cusine: cusineDisplayInterface
+  anime: animeDisplayInterface
 }

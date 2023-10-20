@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { authGuard } from '@auth0/auth0-vue'
-import LoginPage from '../views/LoginPage.vue'
+import MainView from '../views/MainView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'login',
-      component: LoginPage
+      name: 'main',
+      component: MainView
     },
     {
       path: '/questions',

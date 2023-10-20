@@ -5,7 +5,7 @@ import { createStore } from 'vuex'
 import { createAuth0 } from '@auth0/auth0-vue'
 import App from './App.vue'
 import router from './router'
-import { type answer } from './types'
+import { type answerInterface } from './types'
 import { authConfig } from './auth_config'
 
 // Create a new store instance.
@@ -18,7 +18,7 @@ const store = createStore({
     }
   },
   mutations: {
-    update(state: answer, payload: answer) {
+    update(state: answerInterface, payload: answerInterface) {
       state.season = payload.season
       state.cusine = payload.cusine
       state.anime = payload.anime

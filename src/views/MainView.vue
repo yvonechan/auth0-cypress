@@ -9,6 +9,8 @@ const user = ref(auth0.user)
 </script>
 
 <template>
-  <div v-if="isAuthenticated">Logged in. Welcome {{ user.nickname }}!</div>
-  <div v-else>Please login</div>
+  <div v-if="isAuthenticated && user" class="w-full flex justify-center p-3">
+    Logged in. Welcome {{ user.nickname }}!
+  </div>
+  <div v-else class="w-full flex justify-center p-3">Please login</div>
 </template>

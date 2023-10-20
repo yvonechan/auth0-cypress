@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import type { answerInterface } from '@/types'
+import { ref } from 'vue'
 import { useStore } from 'vuex'
 const store = useStore()
 
@@ -8,7 +9,7 @@ const cusine = ref('')
 const anime = ref('')
 
 function handleSubmit(): void {
-  const updatedAnswer = {
+  const updatedAnswer: answerInterface = {
     season: season.value,
     cusine: cusine.value,
     anime: anime.value
